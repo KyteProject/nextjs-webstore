@@ -1,9 +1,5 @@
 import React from 'react';
 
-const Home = () => (
-	<React.Fragment>
-		<p>test</p>
-	</React.Fragment>
-);
+const Home = () => <p>home</p>;
 
 export default Home;

@@ -1,12 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
 
-const Sell = () => (
-	<React.Fragment>
-		<Link href='/'>
-			<button as='a'>test</button>
-		</Link>
-	</React.Fragment>
-);
+const Sell = () => <p>sell</p>;
 
 export default Sell;
