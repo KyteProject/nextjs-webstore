@@ -1,5 +1,5 @@
 import App, { Container } from 'next/app';
-import Page from '../components/Page';
+import Page from '../containers/Page';
 
 class MyApp extends App {
 	static async getInitialProps( { Component, ctx } ) {
