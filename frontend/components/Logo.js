@@ -3,8 +3,8 @@ import Link from 'next/link';
 import Box from './Box';
 
 const Img = styled.img`
-		width: 32px;
-		height: 32px;
+		width: 65px;
+		height: 65px;
 	`,
 	Logo = () => (
 		<Box

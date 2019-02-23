@@ -39,11 +39,11 @@ const CaptionBackground = styled.div`
 	Home = () => (
 		<React.Fragment>
 			<CaptionBackground>
-				<h1>Ukemi</h1>
+				<h1>Unicorn</h1>
 			</CaptionBackground>
 			<Caption>
-				<h1>Ukemi</h1>
-				<h2>MODERN SHOP TEMPLATE</h2>
+				<h1>Unicorn</h1>
+				<h2>UNIQUE CLOTHING, FOR UNIQUE PEOPLE!</h2>
 			</Caption>
 		</React.Fragment>
 	);
