@@ -2,7 +2,7 @@ const colors = {
 	transparent: 'transparent',
 	black: '#000000',
 	white: '#ffffff',
-	grey: '3a3a3a',
+	grey: '#3a3a3a',
 	offWhite: '#EDEDED',
 	lightGrey: '#E1E1E1',
 	text: '#393939',
