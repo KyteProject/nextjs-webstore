@@ -16,7 +16,7 @@ const Img = styled.img`
 			borderRight='1px solid #ededed'
 		>
 			<Link href='/'>
-				<Img src='../static/images/logo.svg' alt='Ukemi Store' />
+				<Img src='../static/images/logo.svg' alt='Unicorn Store' />
 			</Link>
 		</Box>
 	);

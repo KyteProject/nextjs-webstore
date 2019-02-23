@@ -11,11 +11,8 @@ const Meta = () => (
 		<meta httpEquiv='X-UA-Compatible' content='IE=edge' />
 		<link rel='shortcut icon' href='/static/favicon.png' />
 		<link rel='stylesheet' type='text/css' href='' />
-		<title>Ukemi Store!</title>
-		<meta
-			name='description'
-			content='Ukemi promote activity in highly urbanised areas and encourage a healthier society through digital design, product creation, and community arts development. Each company member has practised Parkour for over a decade and this is the lens in which we see the world and project our ideas onto.'
-		/>
+		<title>Unicorn Store!</title>
+		<meta name='description' content='lorem ipsom' />
 	</Head>
 );
 

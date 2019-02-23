@@ -1,7 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faShoppingBag,
 	faMoneyBillWave,

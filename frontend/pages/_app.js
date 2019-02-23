@@ -18,7 +18,7 @@ class MyApp extends App {
 
 		return (
 			<Container>
-				<NProgress color='#F43779' options={{ trickleSpeed: 50 }} showAfterMs={0} spinner />
+				<NProgress color='#F43779' options={{ trickleSpeed: 50 }} showAfterMs={0} />
 				<Page>
 					<Component {...pageProps} />
 				</Page>

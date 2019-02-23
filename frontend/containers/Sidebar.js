@@ -1,8 +1,6 @@
 import Logo from '../components/Logo';
 import Box from './../components/Box';
 import Nav from './Nav';
-import styled from 'styled-components';
-import { themeGet } from 'styled-system';
 
 const Sidebar = () => (
 	<Box

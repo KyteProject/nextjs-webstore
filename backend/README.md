@@ -1,3 +1,3 @@
-# ukemi store
+# unicorn-store store
 
 backend

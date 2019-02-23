@@ -1,3 +1,3 @@
-# ukemi store
+# Unicorn Store
 
 frontend
