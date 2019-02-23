@@ -11,6 +11,7 @@ import {
 	faSearch
 } from '@fortawesome/free-solid-svg-icons';
 import { themeGet } from 'styled-system';
+import NavLink from '../components/NavLink';
 
 const Navigation = styled.nav`
 		li {
@@ -36,50 +37,14 @@ const Navigation = styled.nav`
 	Nav = () => (
 		<Navigation role='navigation'>
 			<ul>
-				<li>
-					<Link href='/home'>
-						<a>
-							<FontAwesomeIcon icon={faHome} size='2x' />
-						</a>
-					</Link>
-				</li>
-				<li>
-					<Link href='/items'>
-						<a>
-							<FontAwesomeIcon icon={faShoppingBag} size='2x' />
-						</a>
-					</Link>
-				</li>
-				<li>
-					<Link href='/sell'>
-						<a>
-							<FontAwesomeIcon icon={faMoneyBillWave} size='2x' />
-						</a>
-					</Link>
-				</li>
-				<li>
-					<Link href='/signup'>
-						<a>
-							<FontAwesomeIcon icon={faSearch} size='2x' />
-						</a>
-					</Link>
-				</li>
-				<li>
-					<Link href='/orders'>
-						<a>
-							<FontAwesomeIcon icon={faShoppingBasket} size='2x' />
-						</a>
-					</Link>
-				</li>
+				<NavLink href='/home' alt='Home' icon={faHome} />
+				<NavLink href='/items' alt='Shop' icon={faShoppingBag} />
+				<NavLink href='/orders' alt='Orders' icon={faMoneyBillWave} />
+				<NavLink href='/search' alt='Search' icon={faSearch} />
+				<NavLink href='/cart' alt='Shopping Cart' icon={faShoppingBasket} />
 			</ul>
 			<BottomNav>
-				<li>
-					<Link href='/user'>
-						<a>
-							<FontAwesomeIcon icon={faUser} size='2x' />
-						</a>
-					</Link>
-				</li>
+				<NavLink href='/user' alt='User Details' icon={faUser} />
 			</BottomNav>
 		</Navigation>
 	);
