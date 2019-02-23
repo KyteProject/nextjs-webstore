@@ -23,7 +23,6 @@ const transform = style( {
 	`;
 
 Heading.propTypes = {
-	content: PropTypes.string,
 	style: PropTypes.string,
 	as: PropTypes.oneOf( [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ] ),
 	...space.propTypes,

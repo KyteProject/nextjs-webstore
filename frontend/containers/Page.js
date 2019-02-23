@@ -3,35 +3,30 @@ import styled, { ThemeProvider } from 'styled-components';
 import { themeGet } from 'styled-system';
 import Meta from './../containers/Meta';
 import { Theme } from '../theme';
-import Header from './Header';
+import Sidebar from './Sidebar';
+import { GlobalStyle } from './global.style';
 
-const PageWrapper = styled.div`
-		background: ${themeGet( 'colors.white', '#fff' )};
-		color: ${themeGet( 'colors.text', '#000' )};
-		background-image: url('../static/placeholder-1920x1080.png');
-		height: 100%;
-		min-height: 100vh;
-		position: relative;
-		transition: all 0.3s;
+const ContentWrapper = styled.div`
+	max-width: ${themeGet( 'maxWidths.7', '1000' )}px;
+	margin: 0 auto;
+	padding: 2rem;
+	min-height: 100vh;
+	/* background-image: url('../static/placeholder-1920x1080.png');
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-position: center;
-	`,
-	ContentWrapper = styled.div`
-		max-width: ${themeGet( 'maxWidths.7', '1000' )}px;
-		margin: 0 auto;
-		padding: 2rem;
-	`;
+		background-position: center; */
+`;
 
 class Page extends Component {
 	render() {
 		return (
 			<ThemeProvider theme={Theme}>
-				<PageWrapper>
+				<React.Fragment>
 					<Meta />
-					<Header />
+					<GlobalStyle />
+					<Sidebar />
 					<ContentWrapper>{this.props.children}</ContentWrapper>
-				</PageWrapper>
+				</React.Fragment>
 			</ThemeProvider>
 		);
 	}
