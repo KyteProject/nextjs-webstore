@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import Card from './Card';
 
 const Thumbnail = styled.img`
@@ -9,7 +10,7 @@ const Thumbnail = styled.img`
 		height: auto;
 		width: 100%;
 	`,
-	Item = ( props ) => {
+	Item = ( { item } ) => {
 		return (
 			<Card
 				display='flex'
@@ -24,18 +25,23 @@ const Thumbnail = styled.img`
 				maxWidth='auto'
 			>
 				{/* Product image */}
-				<Thumbnail src={props.image} alt={props.title} />
+				<Thumbnail src={item.image} alt={item.title} />
 				{/* Produt info */}
 				<span className='product-info'>
-					<a href={props.title}>
-						<span className='product-name'>{props.title}</span>
+					<a href={item.title}>
+						<span className='product-name'>{item.title}</span>
 					</a>
-					<span className='product-description'>{props.description}</span>
-					<span className='product-price'>{props.price}</span>
+					<span>{item.category.name}</span>
+					<span className='product-description'>{item.description}</span>
+					<span className='product-price'>{item.price}</span>
 				</span>
 				{/* Card actions */}
 			</Card>
 		);
 	};
+
+Item.propTypes = {
+	item: PropTypes.object.isRequired
+};
 
 export default Item;

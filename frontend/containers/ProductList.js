@@ -9,6 +9,10 @@ const ALL_ITEMS = gql`
 				title
 				price
 				description
+				category {
+					id
+					name
+				}
 				image
 				largeImage
 			}
@@ -26,15 +30,7 @@ const ALL_ITEMS = gql`
 						return <p>Error: {error.message}</p>;
 					}
 
-					return data.items.map( ( item ) => (
-						<Item
-							key={item.id}
-							title={item.title}
-							description={item.description}
-							price={item.price}
-							image={item.image}
-						/>
-					) );
+					return data.items.map( ( item ) => <Item key={item.id} item={item} /> );
 				}}
 			</Query>
 		);
