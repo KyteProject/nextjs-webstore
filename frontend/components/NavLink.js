@@ -11,7 +11,7 @@ import Link from 'next/link';
 
 const NavLink = ( props ) => (
 	<li>
-		<Link href={props.href}>
+		<Link prefetch href={props.href}>
 			<a alt={props.alt}>
 				<FontAwesomeIcon icon={props.icon} size='2x' />
 			</a>

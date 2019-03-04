@@ -1,26 +1,16 @@
 import App, { Container } from 'next/app';
+import React from 'react';
 import { ApolloProvider } from 'react-apollo';
-import Page from '../containers/Page';
-import withApollo from './../lib/withData';
 import NProgress from 'next-nprogress/component';
+import withApollo from './../lib/withData';
+import Page from '../containers/Page';
 class MyApp extends App {
-	static async getInitialProps( { Component, ctx } ) {
-		let pageProps = {};
-
-		if ( Component.getInitialProps ) {
-			pageProps = await Component.getInitialProps( ctx );
-		}
-
-		// PageProps.query = ctx.query;
-		return { pageProps };
-	}
-
 	render() {
-		const { Component, pageProps, apollo } = this.props;
+		const { Component, pageProps, apolloClient } = this.props;
 
 		return (
 			<Container>
-				<ApolloProvider client={apollo}>
+				<ApolloProvider client={apolloClient}>
 					<NProgress color='#F43779' options={{ trickleSpeed: 50 }} showAfterMs={0} />
 					<Page>
 						<Component {...pageProps} />
