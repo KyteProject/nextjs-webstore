@@ -2,7 +2,6 @@
 import {
 	space,
 	borders,
-	borderColor,
 	width,
 	minWidth,
 	maxWidth,
@@ -35,7 +34,6 @@ export const base = compose(
 	order,
 	alignSelf,
 	borders,
-	borderColor,
 	display,
 	position,
 	zIndex
@@ -45,7 +43,6 @@ base.propTypes = {
 	...display.propTypes,
 	...space.propTypes,
 	...borders.propTypes,
-	...borderColor.propTypes,
 	...width.propTypes,
 	...height.propTypes,
 	...fontSize.propTypes,

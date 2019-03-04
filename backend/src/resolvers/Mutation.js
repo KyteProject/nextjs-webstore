@@ -10,6 +10,19 @@ const Mutations = {
 		);
 
 		return item;
+	},
+
+	async createCategory( parent, args, ctx, info ) {
+		const category = await ctx.db.mutation.createCategory(
+			{
+				data: {
+					...args
+				}
+			},
+			info
+		);
+
+		return category;
 	}
 };
 

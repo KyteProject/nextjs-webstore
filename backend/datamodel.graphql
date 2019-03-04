@@ -12,10 +12,16 @@ type User {
 	name: String!
 }
 
+type Category {
+	id: ID! @unique
+	name: String!
+}
+
 type Item {
 	id: ID! @unique
 	title: String!
 	description: String!
+	category: Category!
 	image: String
 	largeImage: String
 	price: Int!
