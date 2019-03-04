@@ -1,22 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const CaptionBackground = styled.div`
-		position: absolute;
-		right: 0;
-		left: 0;
-		margin: 0 auto;
-		padding: 50px 0;
-		text-align: center;
-		z-index: 1;
-		h1 {
-			font-size: 14rem;
-			font-weight: 900 !important;
-			font-family: 'Alegreya Sans SC', sans-serif;
-			opacity: 0.04;
-		}
-	`,
-	Caption = styled.div`
+const Caption = styled.div`
 		position: absolute;
 		right: 0;
 		left: 0;
@@ -38,12 +23,9 @@ const CaptionBackground = styled.div`
 	`,
 	Home = () => (
 		<React.Fragment>
-			<CaptionBackground>
-				<h1>Unicorn</h1>
-			</CaptionBackground>
 			<Caption>
 				<h1>Unicorn</h1>
-				<h2>UNIQUE CLOTHING, FOR UNIQUE PEOPLE!</h2>
+				<h2>UNIQUE ITEMS, FOR UNIQUE PEOPLE!</h2>
 			</Caption>
 		</React.Fragment>
 	);

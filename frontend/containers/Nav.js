@@ -36,7 +36,7 @@ const Navigation = styled.nav`
 		<Navigation role='navigation'>
 			<ul>
 				<NavLink href='/home' alt='Home' icon={faHome} />
-				<NavLink href='/items' alt='Shop' icon={faShoppingBag} />
+				<NavLink href='/products' alt='Shop' icon={faShoppingBag} />
 				<NavLink href='/orders' alt='Orders' icon={faMoneyBillWave} />
 				<NavLink href='/search' alt='Search' icon={faSearch} />
 				<NavLink href='/cart' alt='Shopping Cart' icon={faShoppingBasket} />

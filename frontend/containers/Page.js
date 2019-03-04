@@ -5,6 +5,7 @@ import Meta from './../containers/Meta';
 import { Theme } from '../theme';
 import Sidebar from './Sidebar';
 import { GlobalStyle } from './global.style';
+import ParticlesComponent from './../components/Particles';
 
 const ContentWrapper = styled.div`
 		height: 100%;
@@ -15,10 +16,19 @@ const ContentWrapper = styled.div`
 		background: ${themeGet( 'colors.offWhite' )};
 		transition: all 0.3s;
 
+		.particle {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+
 		background-image: url('../static/images/bg-1.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
 	`,
+	Container = styled.div`position: relative;`,
 	Page = ( props ) => {
 		return (
 			<ThemeProvider theme={Theme}>
@@ -26,7 +36,10 @@ const ContentWrapper = styled.div`
 					<Meta />
 					<GlobalStyle />
 					<Sidebar />
-					<ContentWrapper>{props.children}</ContentWrapper>
+					<ContentWrapper>
+						<ParticlesComponent />
+						<Container>{props.children}</Container>
+					</ContentWrapper>
 				</React.Fragment>
 			</ThemeProvider>
 		);
