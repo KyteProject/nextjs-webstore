@@ -10,16 +10,20 @@ import {
 	color,
 	position,
 	zIndex,
+	width,
 	style
 } from 'styled-system';
 
 const transform = style( {
 		prop: 'transform',
-		cssProperty: 'transform',
-		key: 'transforms'
+		cssProperty: 'transform'
+	} ),
+	textTransform = style( {
+		prop: 'textTransform',
+		cssProperty: 'text-transform'
 	} ),
 	Heading = styled.p`
-		${space} ${fontFamily} ${textAlign} ${lineHeight} ${fontWeight} ${letterSpacing} ${color} ${position} ${zIndex} ${transform};
+		${space} ${fontFamily} ${width} ${textAlign} ${lineHeight} ${fontWeight} ${letterSpacing} ${color} ${position} ${zIndex} ${transform} ${textTransform};
 	`;
 
 Heading.propTypes = {
@@ -31,7 +35,8 @@ Heading.propTypes = {
 	...textAlign.propTypes,
 	...lineHeight.propTypes,
 	...letterSpacing.propTypes,
-	...color.propTypes
+	...color.propTypes,
+	...width.propTypes
 };
 
 Heading.defaultProps = {
