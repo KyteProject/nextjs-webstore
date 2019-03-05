@@ -1,10 +1,9 @@
 import React from 'react';
 import ProductList from './../containers/ProductList';
 
-const Products = ( props ) => {
+const Products = () => {
 	return (
 		<React.Fragment>
-			<p>Products</p>
 			<ProductList />
 		</React.Fragment>
 	);

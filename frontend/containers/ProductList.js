@@ -2,6 +2,7 @@ import React from 'react';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import Item from '../components/Item';
+import Box from '../components/Box';
 import { groupBy } from '../lib/util';
 
 const ALL_ITEMS = gql`
@@ -34,8 +35,18 @@ const ALL_ITEMS = gql`
 
 					for ( let category in cats ) {
 						if ( category ) {
-							filtered.push( <h1>{category}</h1> );
-							filtered.push( cats[ category ].map( ( item ) => <Item key={item.id} item={item} /> ) );
+							filtered.push(
+								<React.Fragment>
+									<Box m='-0.75rem' display='flex'>
+										<Box display='block' p='0.75rem' ml='8.33%' width='83.33%' flex='none'>
+											{/* <Title /> */}
+											{/* <Controls /> */}
+											{/* Product List */}
+											{cats[ category ].map( ( item ) => <Item key={item.id} item={item} /> )}
+										</Box>
+									</Box>
+								</React.Fragment>
+							);
 						}
 					}
 
