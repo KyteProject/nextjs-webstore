@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {
 	boxShadow,
+	borderRadius,
 	backgroundImage,
 	backgroundSize,
 	backgroundPosition,
@@ -19,11 +20,12 @@ const transition = style( {
 		key: 'transitions'
 	} ),
 	Card = styled.div`
-		${base} ${boxShadow} ${backgroundImage} ${backgroundPosition} ${backgroundRepeat} ${backgroundSize} ${opacity} ${overflow} ${transition} ${justifyContent};
+		${base} ${boxShadow} ${borderRadius} ${backgroundImage} ${backgroundPosition} ${backgroundRepeat} ${backgroundSize} ${opacity} ${overflow} ${transition} ${justifyContent};
 	`;
 
 Card.propTypes = {
 	...boxShadow.propTypes,
+	...borderRadius.propTypes,
 	...backgroundImage.propTypes,
 	...backgroundSize.propTypes,
 	...backgroundPosition.propTypes,
@@ -36,7 +38,7 @@ Card.defaultProps = {
 	position: 'relative',
 	bg: 'white',
 	border: '1px solid #ededed',
-	borderRadius: '0.187rem',
+	borderRadius: '0.25rem',
 	display: 'inline-block',
 	overflow: 'hidden',
 	width: '100%',

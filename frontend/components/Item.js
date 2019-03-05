@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import Card from './Card';
-import currency from '../lib/currency';
+import { currency } from '../lib/util';
 
 const Thumbnail = styled.img`
 		margin: 0;
@@ -19,8 +19,8 @@ const Thumbnail = styled.img`
 				justifyContent='flex-start'
 				alignItems='center'
 				height='auto'
-				padding='20px 40px'
-				marginTop='20px'
+				p='20px 40px'
+				mt='20px'
 				width='100%'
 				minHeight={0}
 				maxHeight='none'
@@ -35,7 +35,7 @@ const Thumbnail = styled.img`
 							<span className='product-name'>{item.title}</span>
 						</a>
 					</Link>
-					<span>{item.category.name}</span>
+					<span>{item.category}</span>
 					<span className='product-description'>{item.description}</span>
 					<span className='product-price'>{currency( item.price )}</span>
 				</span>

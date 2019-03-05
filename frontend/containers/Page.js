@@ -6,6 +6,7 @@ import { Theme } from '../theme';
 import Sidebar from './Sidebar';
 import { GlobalStyle } from './global.style';
 import ParticlesComponent from './../components/Particles';
+import Box from './../components/Box';
 
 const ContentWrapper = styled.div`
 		height: 100%;
@@ -28,7 +29,6 @@ const ContentWrapper = styled.div`
 		background-size: cover;
 		background-repeat: no-repeat;
 	`,
-	Container = styled.div`position: relative;`,
 	Page = ( props ) => {
 		return (
 			<ThemeProvider theme={Theme}>
@@ -38,7 +38,9 @@ const ContentWrapper = styled.div`
 					<Sidebar />
 					<ContentWrapper>
 						<ParticlesComponent />
-						<Container>{props.children}</Container>
+						<Box p='3rem 1.5rem' maxWidth={[ 7, 9, 10 ]} width='auto'>
+							{props.children}
+						</Box>
 					</ContentWrapper>
 				</React.Fragment>
 			</ThemeProvider>

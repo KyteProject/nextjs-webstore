@@ -1,6 +1,8 @@
+import React from 'react';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import Item from '../components/Item';
+import { groupBy } from '../lib/util';
 
 const ALL_ITEMS = gql`
 		{
@@ -9,10 +11,7 @@ const ALL_ITEMS = gql`
 				title
 				price
 				description
-				category {
-					id
-					name
-				}
+				category
 				image
 				largeImage
 			}
@@ -30,10 +29,24 @@ const ALL_ITEMS = gql`
 						return <p>Error: {error.message}</p>;
 					}
 
-					return data.items.map( ( item ) => <Item key={item.id} item={item} /> );
+					const cats = groupBy( data.items, 'category' ),
+						filtered = [];
+
+					for ( let category in cats ) {
+						if ( category ) {
+							filtered.push( <h1>{category}</h1> );
+							filtered.push( cats[ category ].map( ( item ) => <Item key={item.id} item={item} /> ) );
+						}
+					}
+
+					return filtered;
 				}}
 			</Query>
 		);
 	};
 
 export default ProductList;
+
+// [
+// 	home:
+// ]
