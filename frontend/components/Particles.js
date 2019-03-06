@@ -8,7 +8,7 @@ const ParticlesComponent = () => {
 			params={{
 				particles: {
 					number: {
-						value: 15,
+						value: 10,
 						density: { enable: true, value_area: 800 }
 					},
 
@@ -58,9 +58,9 @@ const ParticlesComponent = () => {
 						]
 					},
 					opacity: {
-						value: 0.17626369048095938,
-						random: true,
-						anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false }
+						value: 0.017626369048095938,
+						random: false,
+						anim: { enable: false, speed: 1, opacity_min: 0.001, sync: false }
 					},
 					size: {
 						value: 10,
@@ -71,7 +71,7 @@ const ParticlesComponent = () => {
 					},
 					move: {
 						enable: true,
-						speed: 1.5,
+						speed: 1.25,
 						direction: 'none',
 						random: false,
 						straight: false,

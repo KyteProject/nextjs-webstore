@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import {
 	space,
 	fontFamily,
+	fontSize,
 	textAlign,
 	lineHeight,
 	fontWeight,
@@ -23,7 +24,7 @@ const transform = style( {
 		cssProperty: 'text-transform'
 	} ),
 	Heading = styled.p`
-		${space} ${fontFamily} ${width} ${textAlign} ${lineHeight} ${fontWeight} ${letterSpacing} ${color} ${position} ${zIndex} ${transform} ${textTransform};
+		${space} ${fontFamily} ${fontSize} ${width} ${textAlign} ${lineHeight} ${fontWeight} ${letterSpacing} ${color} ${position} ${zIndex} ${transform} ${textTransform};
 	`;
 
 Heading.propTypes = {
@@ -31,6 +32,7 @@ Heading.propTypes = {
 	as: PropTypes.oneOf( [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ] ),
 	...space.propTypes,
 	...fontFamily.propTypes,
+	...fontSize.propTypes,
 	...fontWeight.propTypes,
 	...textAlign.propTypes,
 	...lineHeight.propTypes,
