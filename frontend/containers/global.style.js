@@ -144,10 +144,11 @@ th {
 
   a {
     text-decoration: none;
-    color: #0023ff;
+    color: #73bbbd;
   }
 
   a:hover {
     text-decoration: none;
+    color: #e38bb7;
   }
 `;

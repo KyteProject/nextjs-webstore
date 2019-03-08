@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { flexWrap, flexDirection, alignItems, justifyContent, boxShadow, style } from 'styled-system';
+import { flexWrap, flexDirection, alignItems, justifyContent, boxShadow, style, lineHeight } from 'styled-system';
 import { base } from './base';
 
 const transition = style( {
@@ -8,7 +8,9 @@ const transition = style( {
 		cssProperty: 'transition',
 		key: 'transitions'
 	} ),
-	Box = styled.div`${base} ${flexWrap} ${flexDirection} ${alignItems} ${justifyContent} ${boxShadow} ${transition};`;
+	Box = styled.div`
+		${base} ${flexWrap} ${flexDirection} ${alignItems} ${justifyContent} ${boxShadow} ${transition} ${lineHeight};
+	`;
 
 Box.propTypes = {
 	as: PropTypes.oneOf( [ 'div', 'article', 'section', 'address', 'header', 'footer', 'nav', 'main' ] ),
@@ -17,6 +19,7 @@ Box.propTypes = {
 	...alignItems.propTypes,
 	...justifyContent.propTypes,
 	...boxShadow.propTypes,
+	...lineHeight.propTypes,
 	transition: PropTypes.string
 };
 

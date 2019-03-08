@@ -4,7 +4,8 @@ import gql from 'graphql-tag';
 import Item from '../components/Item';
 import Box from '../components/Box';
 import { groupBy } from '../lib/util';
-import Title from './Title';
+import ListTitle from './ListTitle';
+import ListControls from './ListControls';
 
 const ALL_ITEMS = gql`
 		{
@@ -40,10 +41,15 @@ const ALL_ITEMS = gql`
 								<React.Fragment>
 									<Box m='-0.75rem' display='flex'>
 										<Box display='block' p='0.75rem' ml='8.33%' width='83.33%' flex='none'>
-											<Title category={category} />
-											{/* <Controls /> */}
+											<ListTitle category={category} />
+											<ListControls />
+
 											{/* Product List */}
-											{cats[ category ].map( ( item ) => <Item key={item.id} item={item} /> )}
+											<Box display='flex' flexWrap='wrap' m='-1.9rem -0.75rem 0.75rem -0.75rem'>
+												<Box flex='none' width='100%' display='block' p='.75rem'>
+													{cats[ category ].map( ( item ) => <Item key={item.id} item={item} /> )}
+												</Box>
+											</Box>
 										</Box>
 									</Box>
 								</React.Fragment>

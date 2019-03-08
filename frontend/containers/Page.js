@@ -25,9 +25,9 @@ const ContentWrapper = styled.div`
 			left: 0;
 		}
 
-		background-image: url('../static/images/bg-1.jpg');
+		/* background-image: url('../static/images/bg-1.jpg');
 		background-size: cover;
-		background-repeat: no-repeat;
+		background-repeat: no-repeat; */
 	`,
 	Page = ( props ) => {
 		return (
@@ -38,8 +38,10 @@ const ContentWrapper = styled.div`
 					<Sidebar />
 					<ContentWrapper>
 						<ParticlesComponent />
-						<Box p='3rem 1.5rem' maxWidth={[ 7, 9, 10 ]} width='auto'>
-							{props.children}
+						<Box p='3rem 1.5rem'>
+							<Box maxWidth={[ 7, 9, 10 ]} m='0 auto'>
+								{props.children}
+							</Box>
 						</Box>
 					</ContentWrapper>
 				</React.Fragment>

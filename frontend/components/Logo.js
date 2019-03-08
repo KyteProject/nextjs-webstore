@@ -7,14 +7,7 @@ const Img = styled.img`
 		height: 65px;
 	`,
 	Logo = () => (
-		<Box
-			width={80}
-			height={80}
-			display='flex'
-			alignItems='center'
-			justifyContent='center'
-			borderRight='1px solid #ededed'
-		>
+		<Box width={80} height={80} display='flex' alignItems='center' justifyContent='center' borderRight={1}>
 			<Link href='/'>
 				<Img src='../static/images/logo.svg' alt='Unicorn Store' />
 			</Link>

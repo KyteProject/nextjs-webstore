@@ -7,7 +7,7 @@ export const Theme = {
 	fontWeights: [ 100, 200, 300, 400, 500, 600, 700, 800, 900 ],
 	lineHeights: {
 		solid: 1,
-		title: 1.25,
+		title: 1.2,
 		copy: 1.5
 	},
 	letterSpacings: {
@@ -16,9 +16,9 @@ export const Theme = {
 		tight: '-0.05em',
 		mega: '0.25em'
 	},
-	borders: [ 0, '1px solid', '2px solid', '3px solid', '4px solid', '5px solid', '6px solid' ],
+	borders: [ 0, '1px solid #ededed', '2px solid', '3px solid', '4px solid', '5px solid', '6px solid' ],
 	radius: [ 3, 4, 5, 10, 20, 30, 60, 120, '50%' ],
 	heights: [ 36, 40, 44, 46, 48, 54, 70, 81, 128 ],
-	maxWidths: [ 16, 32, 64, 128, 256, 512, 768, 960, 1024, 1152, 1344, 1536 ],
+	maxWidths: [ 16, 32, 64, 128, 200, 512, 768, 960, 1024, 1152, 1344, 1536 ],
 	colors
 };
