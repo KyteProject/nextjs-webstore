@@ -27,7 +27,8 @@ const Thumbnail = styled.img`
 				maxWidth='auto'
 			>
 				{/* Product image */}
-				<Thumbnail src={item.image} alt={item.title} />
+				{item.image && <Thumbnail src={item.image} alt={item.title} />}
+
 				{/* Produt info */}
 				<span className='product-info'>
 					<Link as={`/p/${item.category.name}/${item.title}`} href={`/product?id=${item.id}`}>
@@ -39,6 +40,7 @@ const Thumbnail = styled.img`
 					<span className='product-description'>{item.description}</span>
 					<span className='product-price'>{currency( item.price )}</span>
 				</span>
+
 				{/* Card actions */}
 			</Card>
 		);
